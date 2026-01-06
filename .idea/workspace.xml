@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c58abcba-2af5-4e87-af48-40fc854e630e" name="更改" comment="" />
+    <list default="true" id="c58abcba-2af5-4e87-af48-40fc854e630e" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktopmahiro/chat_dialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/desktopmahiro/chat_dialog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktopmahiro/mahiro.py" beforeDir="false" afterPath="$PROJECT_DIR$/desktopmahiro/mahiro.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +42,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "develop",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "E:/PythonProject/Desktopmahiro/desktopmahiro/resource",
     "node.js.detected.package.eslint": "true",
@@ -54,6 +58,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\PythonProject\Desktopmahiro\desktopmahiro\resource" />
+      <recent name="E:\PythonProject\Desktopmahiro\desktopmahiro" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\PythonProject\Desktopmahiro\desktopmahiro" />
     </key>
   </component>
@@ -108,7 +115,7 @@
       <workItem from="1767524273485" duration="1132000" />
       <workItem from="1767597200994" duration="7217000" />
       <workItem from="1767619974495" duration="1481000" />
-      <workItem from="1767688706081" duration="8138000" />
+      <workItem from="1767688706081" duration="11630000" />
     </task>
     <servers />
   </component>
@@ -117,7 +124,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Desktopmahiro$main.coverage" NAME="main 覆盖结果" MODIFIED="1767597695975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/desktop" />
-    <SUITE FILE_PATH="coverage/Desktopmahiro$mahiro.coverage" NAME="mahiro 覆盖结果" MODIFIED="1767700021940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/desktopmahiro" />
+    <SUITE FILE_PATH="coverage/Desktopmahiro$mahiro.coverage" NAME="mahiro 覆盖结果" MODIFIED="1767703837552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/desktopmahiro" />
     <SUITE FILE_PATH="coverage/Desktopmahiro$test.coverage" NAME="test 覆盖结果" MODIFIED="1767690374575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Desktopmahiro$chat_dialog.coverage" NAME="chat_dialog 覆盖结果" MODIFIED="1767691110902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/desktopmahiro" />
   </component>

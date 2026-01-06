@@ -9,11 +9,8 @@ class ChatDialog(QDialog):
     def __init__(self, call_ai_func, parent=None):
         super().__init__(parent)
         self.setWindowTitle("和真寻对话！")
-        self.setWindowFlags(
-            Qt.Window |
-            Qt.WindowMinimizeButtonHint |
-            Qt.WindowCloseButtonHint
-        )
+        # 使用 Qt.WindowFlags 包装位掩码，避免静态类型检查警告
+        self.setWindowFlags(Qt.WindowFlags(Qt.Window | Qt.WindowMinimizeButtonHint | Qt.WindowCloseButtonHint))
         self.setWindowIcon(QIcon("resource/mahirowindowhead.jpg"))
         self.resize(1000, 700)
         self.history = []
@@ -38,6 +35,9 @@ class ChatDialog(QDialog):
         self.avatar_user = "resource/user.png"      # 你自己的头像（换成你的图片路径）
         self.avatar_ai =   "resource/mahirohead.jpg" # AI人物形象头像
 
+        # 用于在等待异步结果时保存占位项
+        self._thinking_item = None
+
     # 发送消息给main程序处理,并显示回复
     def send_message(self):
         user_input = self.input_line.text().strip()
@@ -47,15 +47,56 @@ class ChatDialog(QDialog):
         self.history.append({"role": "user", "content": user_input})
         self.input_line.clear()
         self.send_btn.setEnabled(False)
+
+        # 添加一个“思考中”占位，等待异步返回
+        self._thinking_item = QListWidgetItem(self.list_widget)
+        placeholder_widget = QWidget()
+        placeholder_layout = QHBoxLayout(placeholder_widget)
+        placeholder_label = QLabel("...思考中...")
+        placeholder_layout.addWidget(placeholder_label)
+        placeholder_layout.addStretch()
+        placeholder_layout.setContentsMargins(6,6,6,6)
+        placeholder_widget.setLayout(placeholder_layout)
+        self._thinking_item.setSizeHint(placeholder_widget.sizeHint())
+        self.list_widget.addItem(self._thinking_item)
+        self.list_widget.setItemWidget(self._thinking_item, placeholder_widget)
+        self.list_widget.scrollToBottom()
+
+        # 支持两种调用方式：异步 call_ai_func(history, callback) 或 同步 call_ai_func(history)
         try:
-            ai_answer = self.call_ai_func(self.history)
-            self.append_chat("AI", ai_answer, avatar=self.avatar_ai)
-            self.history.append({"role": "assistant", "content": ai_answer})
-        except Exception as e:
-            self.append_chat("AI", f"[发生错误: {e}]", avatar=self.avatar_ai)
+            # 试着以异步回调的方式调用
+            self.call_ai_func(self.history, self.on_ai_result)
+        except TypeError:
+            # 如果不能以回调方式调用，则回退到同步调用（兼容旧实现）
+            try:
+                ai_answer = self.call_ai_func(self.history)
+                # 直接处理返回值
+                self.on_ai_result(ai_answer)
+            except Exception as e:
+                # 替换占位并显示错误
+                self._replace_thinking_with_text(f"[发生错误: {e}]")
+                self.history.append({"role": "assistant", "content": f"[发生错误: {e}]"})
+                self.send_btn.setEnabled(True)
+
+    def on_ai_result(self, ai_text):
+        # 回调由外部线程/函数调用，用于异步返回处理
+        if ai_text is None:
+            ai_text = ""
+        # 移除占位并添加真实回复
+        self._replace_thinking_with_text(ai_text, avatar=self.avatar_ai)
+        self.history.append({"role": "assistant", "content": ai_text})
         self.send_btn.setEnabled(True)
 
-        # 在聊天窗口添加消息,包括头像和文本
+    def _replace_thinking_with_text(self, text, avatar=None):
+        # 若存在占位item，则替换为真实的消息item
+        if self._thinking_item is not None:
+            row = self.list_widget.row(self._thinking_item)
+            self.list_widget.takeItem(row)
+            self._thinking_item = None
+        # 添加AI消息
+        self.append_chat("AI", text, avatar=avatar or self.avatar_ai)
+
+    # 在聊天窗口添加消息,包括头像和文本
     def append_chat(self, sender, message, avatar):
         # 创建头像标签
         avatar_label = QLabel()

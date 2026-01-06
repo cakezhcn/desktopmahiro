@@ -1,22 +1,26 @@
 import sys
 import openai
 from PyQt5.QtWidgets import QApplication, QLabel, QMenu, QWidget, QAction
-from PyQt5.QtGui import QMovie, QCursor
+from PyQt5.QtGui import QMovie, QCursor, QIcon
 from PyQt5.QtCore import Qt, QPoint
 from chat_dialog import ChatDialog
 
 GIF_PATH = "resource/mahiro.gif"
 TARGET_SIZE = (250, 250)
-DEEPSEEK_API_KEY = "sk-a7d2b0a8b4344308a258cd47645cd137"
+DEEPSEEK_API_KEY = "sk-fae19755c94941cd9f634b5580694fa2"
 DEEPSEEK_BASE_URL = "https://api.deepseek.com"
 
 class mahiro(QWidget):
     def __init__(self, gif_path):
         super().__init__()
+        self.setWindowTitle("和真寻一起生活吧！")
+        self.setWindowIcon(QIcon("resource/mahirowindowhead.jpg"))
+        # 分别设置窗口标志，避免静态类型警告
         self.setWindowFlags(
-            Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint | Qt.Tool
+            Qt.WindowStaysOnTopHint | Qt.FramelessWindowHint | Qt.Window
         )
-        self.setAttribute(Qt.WA_TranslucentBackground, True)  # 支持透明
+        # 设置透明背景
+        self.setAttribute(Qt.WA_TranslucentBackground, True)  # 支持透明  # type: ignore
 
         # GIF动画
         self.label = QLabel(self)
@@ -38,14 +42,13 @@ class mahiro(QWidget):
 
         self.chat_dialog = ChatDialog(self.ask_deepseek, None)
         self.ai_action = QAction("和她交流", self)
-        self.ai_action.triggered.connect(self.show_chat_dialog_center)
+        self.ai_action.triggered.connect(self.show_chat_dialog_center)  # type: ignore
         self.menu.addAction(self.ai_action)
         # 添加AI对话选项
-
+        # 添加退出选项（创建并连接 exit_action）
         exit_action = QAction("退出", self)
-        exit_action.triggered.connect(self.close)
+        exit_action.triggered.connect(self.close)  # type: ignore
         self.menu.addAction(exit_action)
-        # 添加退出选项
 
         self.drag_position = QPoint()
 
@@ -92,6 +95,12 @@ class mahiro(QWidget):
         if event.buttons() == Qt.LeftButton:
             self.move(event.globalPos() - self.drag_position)
             event.accept()
+    def closeEvent(self, event):
+        # 主窗关闭时，主动关闭全部子窗体
+        if self.chat_dialog and self.chat_dialog.isVisible():
+            self.chat_dialog.close()
+        event.accept()  # 允许继续关闭
+        # QApplication会自动退出事件循环，不需额外 sys.exit()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
