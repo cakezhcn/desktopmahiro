@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c58abcba-2af5-4e87-af48-40fc854e630e" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktopmahiro/chat_dialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/desktopmahiro/chat_dialog.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktopmahiro/mahiro.py" beforeDir="false" afterPath="$PROJECT_DIR$/desktopmahiro/mahiro.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktopmahiro/chat_dialog.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat_dialog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktopmahiro/mahiro.py" beforeDir="false" afterPath="$PROJECT_DIR$/mahiro.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktopmahiro/resource/mahiro.gif" beforeDir="false" afterPath="$PROJECT_DIR$/resource/mahiro.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktopmahiro/resource/mahirohead.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resource/mahirohead.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktopmahiro/resource/mahirowindowhead.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resource/mahirowindowhead.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktopmahiro/resource/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/resource/user.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,40 +36,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.chat_dialog.executor": "Run",
-    "Python.mahiro.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.test.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "develop",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "E:/PythonProject/Desktopmahiro/desktopmahiro/resource",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "pyconsole",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.chat_dialog.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mahiro.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/PythonProject/Desktopmahiro/desktopmahiro/resource&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\PythonProject\Desktopmahiro\desktopmahiro\resource" />
       <recent name="E:\PythonProject\Desktopmahiro\desktopmahiro" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\PythonProject\Desktopmahiro" />
       <recent name="E:\PythonProject\Desktopmahiro\desktopmahiro" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="mahiro" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="mahiro" type="PythonConfigurationType" factoryName="Python">
       <module name="Desktopmahiro" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -74,12 +79,13 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/desktopmahiro" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="SDK_NAME" value="Python 3.13 (Desktopmahiro)" />
+      <option name="WORKING_DIRECTORY" value="E:\PythonProject\Desktopmahiro" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/desktopmahiro/mahiro.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mahiro.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -88,11 +94,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.mahiro" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -115,7 +116,10 @@
       <workItem from="1767524273485" duration="1132000" />
       <workItem from="1767597200994" duration="7217000" />
       <workItem from="1767619974495" duration="1481000" />
-      <workItem from="1767688706081" duration="11937000" />
+      <workItem from="1767688706081" duration="12480000" />
+      <workItem from="1767704859866" duration="312000" />
+      <workItem from="1767705176944" duration="64000" />
+      <workItem from="1767705262990" duration="77000" />
     </task>
     <servers />
   </component>
@@ -124,7 +128,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Desktopmahiro$main.coverage" NAME="main 覆盖结果" MODIFIED="1767597695975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/desktop" />
-    <SUITE FILE_PATH="coverage/Desktopmahiro$mahiro.coverage" NAME="mahiro 覆盖结果" MODIFIED="1767704069715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/desktopmahiro" />
+    <SUITE FILE_PATH="coverage/Desktopmahiro$mahiro.coverage" NAME="mahiro 覆盖结果" MODIFIED="1767705178113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Desktopmahiro$test.coverage" NAME="test 覆盖结果" MODIFIED="1767690374575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Desktopmahiro$chat_dialog.coverage" NAME="chat_dialog 覆盖结果" MODIFIED="1767691110902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/desktopmahiro" />
   </component>
