@@ -1,5 +1,10 @@
 # 使用步骤
-首先把依赖装一下：
+首先可以在项目目录装一下虚拟环境:
+```
+python -m venv venv
+\venv\Scripts\activate
+```
+把依赖装一下：
 ```
 pip install -r requirements.txt
 ```
