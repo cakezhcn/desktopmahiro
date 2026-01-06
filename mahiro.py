@@ -7,7 +7,7 @@ from chat_dialog import ChatDialog
 
 GIF_PATH = "resource/mahiro.gif"
 TARGET_SIZE = (250, 250)
-DEEPSEEK_API_KEY = "sk-fae19755c94941cd9f634b5580694fa2"
+DEEPSEEK_API_KEY = ""
 DEEPSEEK_BASE_URL = "https://api.deepseek.com"
 
 class mahiro(QWidget):
