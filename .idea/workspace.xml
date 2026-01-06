@@ -115,7 +115,7 @@
       <workItem from="1767524273485" duration="1132000" />
       <workItem from="1767597200994" duration="7217000" />
       <workItem from="1767619974495" duration="1481000" />
-      <workItem from="1767688706081" duration="11630000" />
+      <workItem from="1767688706081" duration="11937000" />
     </task>
     <servers />
   </component>
@@ -124,7 +124,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Desktopmahiro$main.coverage" NAME="main 覆盖结果" MODIFIED="1767597695975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/desktop" />
-    <SUITE FILE_PATH="coverage/Desktopmahiro$mahiro.coverage" NAME="mahiro 覆盖结果" MODIFIED="1767703837552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/desktopmahiro" />
+    <SUITE FILE_PATH="coverage/Desktopmahiro$mahiro.coverage" NAME="mahiro 覆盖结果" MODIFIED="1767704069715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/desktopmahiro" />
     <SUITE FILE_PATH="coverage/Desktopmahiro$test.coverage" NAME="test 覆盖结果" MODIFIED="1767690374575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Desktopmahiro$chat_dialog.coverage" NAME="chat_dialog 覆盖结果" MODIFIED="1767691110902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/desktopmahiro" />
   </component>
